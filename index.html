@@ -5,29 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的个人网页 - 小猫咪对话</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- 添加Font Awesome图标库 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <div class="container">
+    <header>
         <h1>我的个人网页</h1>
+    </header>
+    <main class="container">
+        <section class="slideshow-section">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="image1.jpg" alt="Image 1">
+                </div>
+                <div class="mySlides fade">
+                    <img src="image2.jpg" alt="Image 2">
+                </div>
+                <div class="mySlides fade">
+                    <img src="image3.jpg" alt="Image 3">
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </section>
         
-        <!-- 照片轮播部分 -->
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <img src="image1.jpg" alt="Image 1">
-            </div>
-            <div class="mySlides fade">
-                <img src="image2.jpg" alt="Image 2">
-            </div>
-            <div class="mySlides fade">
-                <img src="image3.jpg" alt="Image 3">
-            </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-        
-        <!-- AI对话部分 -->
         <section id="ai-chat">
             <h2>与小猫咪对话</h2>
             <div class="chat-container">
@@ -44,9 +44,8 @@
                 <p>免责声明: 此小猫咪助手仅用于演示目的，可能无法回答所有问题或提供准确信息。</p>
             </div>
         </section>
-    </div>
+    </main>
 
-    <!-- 添加尾部导航 -->
     <footer>
         <div class="social-links">
             <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>

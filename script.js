@@ -8,6 +8,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const API_URL = "https://api-inference.huggingface.co/models/facebook/blenderbot-400M-distill";
     const API_KEY = "YOUR_HUGGINGFACE_API_KEY"; // 替换为您的 API 密钥
 
+    // 轮播功能
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    window.plusSlides = function(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "block";
+    }
+
+    // 自动轮播
+    setInterval(() => {
+        plusSlides(1);
+    }, 5000); // 每5秒切换一次图片
+
     // 加载保存的对话历史
     loadChatHistory();
 
